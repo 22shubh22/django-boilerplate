@@ -41,9 +41,10 @@ INSTALLED_APPS = [
 
     # Third-Party Apps
     'rest_framework',
-
+    'drf_yasg',
+    'corsheaders',
     # Local Apps (Your project's apps)
-    'myapi.core',
+    'core',
 ]
 
 MIDDLEWARE = [
@@ -54,9 +55,13 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'myapi.urls'
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 TEMPLATES = [
     {

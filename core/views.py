@@ -4,6 +4,9 @@ from rest_framework.permissions import IsAuthenticated
 
 
 class HelloView(APIView):
+    """
+        This is a nice demo
+    """
     permission_classes = (IsAuthenticated,)
 
     def get(self, request):
